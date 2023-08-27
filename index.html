@@ -1,64 +1,73 @@
-<html>
+<html lang="es">
+
 <head>
-<style>
-body {
-  background-color: rgb(255, 72, 72);
-  font-family: "Lucida Handwriting", cursive;
-  font-size: 40px;
-  text-align: center;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rey & Yadriany</title>
+  <style>
+    body {
+      background-color: rgb(255, 72, 72);
+      font-family: "Lucida Handwriting", cursive;
+      font-size: 40px;
+      text-align: center;
+    }
 
-h1 {
-  color: white;
-  text-shadow: 2px 2px 5px rgb(0, 0, 0);
-}
+    h1 {
+      color: white;
+      text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    }
 
-img {
-  border: 10px solid white;
-  border-radius: 50%;
-}
+    img {
+      border: 10px solid white;
+      border-radius: 50%;
+    }
 
-p {
-  color: white;
-  text-shadow: 2px 2px 5px rgb(0, 0, 0);
-}
+    p {
+      color: white;
+      text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    }
 
-h1:hover, p:hover {
-  transform: scale(1.2);
-}
+    h1:hover,
+    p:hover {
+      transform: scale(1.2);
+    }
 
-h1, p {
-  transition: transform 0.5s;
-}
-
-</style>
+    h1,
+    p {
+      transition: transform 0.5s;
+    }
+  </style>
 </head>
+
 <body>
-<h1>Te amo, mi amor</h1>
-<img src="https://i.pinimg.com/originals/67/37/93/67379366cb2f1c5f9ad4cf4f9e529809.gif" alt="Gif de animación">
-<p>Hoy cumplimos <span id="tiempo"></span> juntos</p>
-<p>Rey ❤️ Yadriany</p>
-<p>Te Amo más de lo que te he podido demostrar</p>
-<script>
-  // Cambia la fecha de inicio por la tuya
-  var fechaInicio = new Date("2022-11-30");
-  var fechaActual = new Date();
-  var meses = (fechaActual.getFullYear() - fechaInicio.getFullYear()) * 12;
-  meses -= fechaInicio.getMonth() + 1;
-  meses += fechaActual.getMonth() + 1;
+  <h1>Te amo, mi amor</h1>
+  <img src="https://i.pinimg.com/originals/67/37/93/67379366cb2f1c5f9ad4cf4f9e529809.gif" alt="Gif de animación">
+  <p>Hoy cumplimos <span id="tiempo"></span> juntos</p>
+  <p>Rey ❤️ Yadriany</p>
+  <p>Te Amo más de lo que te he podido demostrar</p>
+  <script>
+    // Cambia la fecha de inicio por la tuya
+    var fechaInicio = new Date("2022-11-30");
+    var fechaActual = new Date();
+    var meses = (fechaActual.getFullYear() - fechaInicio.getFullYear()) * 12;
+    meses -= fechaInicio.getMonth() + 1;
+    meses += fechaActual.getMonth() + 1;
 
-  var diasInicio = fechaInicio.getDate();
-  var diasActual = fechaActual.getDate();
-  var dias = 0;
+    var diasInicio = fechaInicio.getDate();
+    var diasActual = fechaActual.getDate();
+    var dias = 0;
 
-  if (diasActual < diasInicio) {
-    var ultimoDiaMesPrevio = new Date(fechaActual.getFullYear(), fechaActual.getMonth(), 0).getDate();
-    dias = ultimoDiaMesPrevio - diasInicio + diasActual;
-  } else {
-    dias = diasActual - diasInicio;
-  }
-  var textoTiempo = meses + " meses y " + dias + " días";
-  document.getElementById("tiempo").innerHTML = textoTiempo;
-</script>
+    if (diasActual < diasInicio) {
+      var ultimoDiaMesPrevio = new Date(fechaActual.getFullYear(), fechaActual.getMonth(), 0).getDate();
+      dias = ultimoDiaMesPrevio - diasInicio + diasActual
+      dias = dias - 2;
+    } else {
+      dias = diasActual - diasInicio;
+      dias = dias - 2;
+    }
+    var textoTiempo = meses + " meses y " + dias + " días";
+    document.getElementById("tiempo").innerHTML = textoTiempo;
+  </script>
 </body>
+
 </html>
